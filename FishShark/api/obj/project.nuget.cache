@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PQdeI7YOX0Q=",
+  "dgSpecHash": "x4TUuzS9rDo=",
   "success": true,
-  "projectFilePath": "C:\\Users\\jamag\\Documents\\JunkProjects\\FishShark\\api\\api.csproj",
+  "projectFilePath": "C:\\Users\\jamag\\Documents\\GitHub\\.NET-Core-9-Webapi-Stock\\FishShark\\api\\api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jamag\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\jamag\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

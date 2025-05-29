@@ -1,5 +1,6 @@
 using api.Data;
 using api.Dtos.Stock;
+using api.Helpers;
 using api.Interfaces;
 using api.Mapper;
 using Microsoft.AspNetCore.Mvc;
@@ -20,7 +21,7 @@ namespace api.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAll()
+        public async Task<IActionResult> GetAll([FromQuery] QueryObject queryObject)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
@@ -28,7 +29,7 @@ namespace api.Controllers
             //Database → Stock → Mapper → StockDto → API Response
 
             // You're asking Entity Framework Core (EF Core) to go to the Stocks table in your database and get all rows or get all data.
-            var stock = await _stockRepo.GetAllAsync();
+            var stock = await _stockRepo.GetAllAsync(queryObject);
 
             //converting each Stock object into a StockDto, using the mapper method
             var stockDto = stock.Select(s => s.ToStockDto());
