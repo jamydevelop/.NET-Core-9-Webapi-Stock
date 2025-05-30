@@ -329,3 +329,9 @@ C:\Users\jamag\Documents\GitHub\.NET-Core-9-Webapi-Stock\FishShark\api\obj\Debug
 C:\Users\jamag\Documents\GitHub\.NET-Core-9-Webapi-Stock\FishShark\api\obj\Debug\net9.0\api.pdb
 C:\Users\jamag\Documents\GitHub\.NET-Core-9-Webapi-Stock\FishShark\api\obj\Debug\net9.0\api.genruntimeconfig.cache
 C:\Users\jamag\Documents\GitHub\.NET-Core-9-Webapi-Stock\FishShark\api\obj\Debug\net9.0\ref\api.dll
+C:\Users\jamag\Documents\GitHub\.NET-Core-9-Webapi-Stock\FishShark\api\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\jamag\Documents\GitHub\.NET-Core-9-Webapi-Stock\FishShark\api\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\jamag\Documents\GitHub\.NET-Core-9-Webapi-Stock\FishShark\api\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\jamag\Documents\GitHub\.NET-Core-9-Webapi-Stock\FishShark\api\bin\Debug\net9.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\jamag\Documents\GitHub\.NET-Core-9-Webapi-Stock\FishShark\api\bin\Debug\net9.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\jamag\Documents\GitHub\.NET-Core-9-Webapi-Stock\FishShark\api\bin\Debug\net9.0\Microsoft.Extensions.Identity.Stores.dll
