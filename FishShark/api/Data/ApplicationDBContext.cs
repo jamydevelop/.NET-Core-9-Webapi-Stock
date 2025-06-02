@@ -1,13 +1,8 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using api.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.SqlServer.Infrastructure.Internal;
+
 
 namespace api.Data
 {
@@ -25,28 +20,36 @@ namespace api.Data
 
         public DbSet<Stock> Stocks { get; set; }
         public DbSet<Comment> Comments { get; set; }
-        protected override void OnModelCreating(ModelBuilder builder)
+        public DbSet<Portfolio> Portfolios { get; set; }
+
+      protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
+
+            builder.Entity<Portfolio>(x => x.HasKey(p => new { p.AppUserId, p.StockId }));
+
+            builder.Entity<Portfolio>()
+                .HasOne(u => u.AppUser)
+                .WithMany(u => u.Portfolios)
+                .HasForeignKey(p => p.AppUserId);
+
+            builder.Entity<Portfolio>()
+                .HasOne(u => u.Stock)
+                .WithMany(u => u.Portfolios)
+                .HasForeignKey(p => p.StockId);
+
+
             List<IdentityRole> roles = new List<IdentityRole>
             {
                 new IdentityRole
                 {
-                    //Id = Guid.NewGuid().ToString(),
-                    //Id = "1",
-                    //Id = "dcb69e7c-6a42-4b9f-b47c-70c3fc05c333", // Admin
                     Id = AdminRoleId,
-                    //Id = "testAdmin",
                     Name = "Admin",
                     NormalizedName = "ADMIN"
                 },
-                  new IdentityRole
+                new IdentityRole
                 {
-                      //Id = Guid.NewGuid().ToString(),
-                      //Id = "2",
-                      //Id = "875b1a76-f41b-4e0e-8710-89fc3e7ad2c4", // User
                     Id = UserRoleId,
-                   //Id = "testUser",
                     Name = "User",
                     NormalizedName = "USER"
                 },
