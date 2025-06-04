@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace api.Migrations
 {
     /// <inheritdoc />
-    public partial class PortfolioManyToMany : Migration
+    public partial class InitialCreate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -226,8 +226,8 @@ namespace api.Migrations
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
                 values: new object[,]
                 {
-                    { "cadbf339-da31-4d53-a494-732544113a74", null, "Admin", "ADMIN" },
-                    { "ef4d328e-74e4-40cf-8a39-851a724c66dd", null, "User", "USER" }
+                    { "0423af8a-0b41-4e7b-ae51-caf280ef1e66", null, "User", "USER" },
+                    { "d5446d84-cc1e-4e73-bb0f-c46bf264b584", null, "Admin", "ADMIN" }
                 });
 
             migrationBuilder.CreateIndex(
