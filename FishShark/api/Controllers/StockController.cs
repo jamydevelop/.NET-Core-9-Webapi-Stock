@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 
+
 namespace api.Controllers
 {
     [Route("api/stock")]
@@ -31,6 +32,8 @@ namespace api.Controllers
             //Database → Stock → Mapper → StockDto → API Response
 
             // You're asking Entity Framework Core (EF Core) to go to the Stocks table in your database and get all rows or get all data.
+
+            //var newStock = await _context.Stocks.ToListAsync();
             var stock = await _stockRepo.GetAllAsync(queryObject);
 
             //converting each Stock object into a StockDto, using the mapper method
